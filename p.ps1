@@ -18,4 +18,5 @@ Add-Type -TypeDefinition @"
 "@
 
 # Establecer la imagen como fondo de pantalla
-[Wallpaper]::SystemParametersInfo(20, 0, $tempImagePath, 0x01 | 0x02)
+[Wallpaper]::SystemParametersInfo(0x0014, 0, $tempImagePath, 0x01 -bor 0x02)
+
